@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+*{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.simulasi-title{
+    font-size: 2.3rem;
+    text-align: center;
+    font-weight: bold;
+    color: rgb(0, 66, 113);
+}
+
+.simulasi-subtitle{
+    margin-top: 1rem;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.simulasi-form{
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    border-radius: 10px;
+    width: 100%;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+.form-header{
+    display: flex;
+    justify-content: space-between;
+    background: #004271;
+    color: white;
+    font-size: 1.2rem;
+    padding: 1.5rem 3rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.form-content{
+    background: #DBE4E9;
+    height: fit-content ;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-bottom: 3.5rem;
+    position: relative;
+}
+
+.content-wrap{
+    padding: 1rem 2rem;
+    padding-bottom: 0.5rem;
+}
+
+.keterangan-title{
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.ul-kami li{
+    list-style-type: disc;
+    margin-top: 1rem;
+}
+
+.input-field-wrap{
+    height: fit-content;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.input{
+    background: white;
+    padding: 1rem;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.input-big{
+    background: white;
+    padding: 1rem;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.checkbox{
+    background: white;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 0.9fr 1.2fr 1fr;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    place-items: center;
+}
+
+.checkbox-title{
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.align-center{
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    margin-top: 0.25rem;
+}
+
+.hasil-center{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-right: 2rem;
+}
+
+.input-small{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.input-title{
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.select-input{
+    border: none;
+    width: 100%;
+    border-bottom: 0.5px solid rgb(156, 155, 155);
+    padding-bottom: 0.25rem;
+    color: #878787;
+}
+
+.number-input{
+    border: none;
+    width: 100%;
+    border-bottom: 0.5px solid rgb(156, 155, 155);
+    padding-bottom: 0.25rem;
+    color: #878787;
+    background: white !important;
+    font-size: 0.8rem;
+}
+
+.number_input:hover, 
+.select-input:hover{
+    cursor: pointer;
+}
+
+.wrap-1{
+    display: flex;
+    gap: 0rem 0.5rem;
+}
+
+.rp{
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.button-hasil{
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    background: white;
+    width: 60%;
+    margin: auto;
+}
+
+.premi-hasil{
+    color: white;
+    background: #FAA61A;
+    border: #FAA61A 2px solid;
+    padding: 0.8rem 4rem;
+    border-radius: 20px;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: all ease-in 250ms;
+}
+
+.premi-hasil:hover{
+    color: #FAA61A;
+    border: #FAA61A 2px solid;
+    background: transparent;
+}
+
+.hasil{
+   font-size: 1.1rem;
+   font-weight: bold;
+   margin-left: 1.5rem;
+}
+
+.warning{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding-bottom: 1.25rem;
+    color: rgb(216, 29, 29);
+}
+
+/* MEDIA QUERIES (MEDIUM DEVICES) */
+@media screen and (max-width: 1024px) {
+
+    .simulasi-title{
+        font-size: 1.9rem;
+    }
+
+    .simulasi-subtitle{
+        font-size: 0.8rem;
+    }
+
+    .simulasi-form{
+        margin-top: 2rem;
+    }
+
+    .form-header{
+        font-size: 1.2rem;
+        padding: 1.25rem 3rem;
+    }
+
+    .content-wrap{
+        padding: 2rem;
+        gap: 1rem;
+    }
+
+    .keterangan-title{
+        font-size: 0.8rem;
+    }
+
+    .ul-kami li{
+        margin-top: 1rem;
+        font-size: 0.55rem;
+    }
+
+    .input-field-wrap{
+        padding: 0.2rem;
+        gap: 1rem;
+    }
+
+    .input{
+        padding: 0.5rem;
+    }
+
+    .input-title{
+        font-size: 0.8rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .select-input{
+        font-size: 0.7rem;
+        width: 140px;
+    }
+
+    .number-input{
+        width: 120px;
+        font-size: 0.7rem;
+    }
+
+    .wrap-1{
+        display: flex;
+        gap: 0rem 0.5rem;
+    }
+
+    .rp{
+        font-size: 0.75rem;
+    }
+
+    .premi-hasil{
+        padding: 0.5rem 2rem;
+        font-size: 1rem;
+    }
+
+    .hasil{
+        font-size: 0.8rem;
+        margin-left: 1rem;
+    }
+
+}
+
+/* MEDIA QUERIES (SMALL DEVICES) */
+@media screen and (max-width: 600px) {
+
+    *{
+        font-family: 'Ubuntu', sans-serif;
+    }
+    
+    .simulasi-title{
+        font-size: 2rem;
+        text-align: center;
+        font-weight: bold;
+        color: rgb(0, 66, 113);
+    }
+    
+    .simulasi-subtitle{
+        margin-top: 1rem;
+        font-size: 1rem;
+        text-align: center;
+    }
+    
+    .form-header{
+        font-size: 1rem;
+        padding: 1.5rem 2rem;
+
+    }
+    
+    .content-wrap{
+        padding: 2rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .keterangan-title{
+        font-weight: bold;
+        font-size: 1rem;
+    }
+    
+    .ul-kami li{
+        width: 90%;
+        margin: auto;
+        margin-top: 1rem;
+        font-size: 0.8rem;
+    }
+    
+    .input-field-wrap{
+        padding: 1rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    
+    .select-input{
+        border: none;
+        width: 200px;
+        border-bottom: 0.5px solid rgb(156, 155, 155);
+        padding-bottom: 0.25rem;
+        color: #878787;
+    }
+    
+    .number-input{
+        border: none;
+        width: 170px;
+        border-bottom: 0.5px solid rgb(156, 155, 155);
+        padding-bottom: 0.25rem;
+        color: #878787;
+        background: white !important;
+        font-size: 0.8rem;
+    }
+
+    .input{
+        background: white;
+        padding: 1rem;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    }
+    
+    .input-title{
+        font-size: 1.1rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+    }
+    
+    .wrap-1{
+        display: flex;
+        gap: 0rem 0.5rem;
+    }
+    
+    .button-hasil{
+        width:85%;
+        margin: auto;
+    }
+    
+    .premi-hasil{
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    .hasil{
+       font-size: 0.8rem;
+       font-weight: bold;
+       margin-left: 0.5rem;
+    } 
+}

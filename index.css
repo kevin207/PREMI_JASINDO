@@ -245,11 +245,9 @@
 
     .select-input{
         font-size: 0.7rem;
-        width: 140px;
     }
 
     .number-input{
-        width: 120px;
         font-size: 0.7rem;
     }
 
@@ -271,7 +269,14 @@
         font-size: 0.8rem;
         margin-left: 1rem;
     }
+    
+    .align-center{
+        font-size: 0.7rem;
+    }
 
+    .checkbox{
+        gap: 0.6rem;
+    }
 }
 
 /* MEDIA QUERIES (SMALL DEVICES) */
@@ -329,7 +334,6 @@
     
     .select-input{
         border: none;
-        width: 200px;
         border-bottom: 0.5px solid rgb(156, 155, 155);
         padding-bottom: 0.25rem;
         color: #878787;
@@ -337,7 +341,6 @@
     
     .number-input{
         border: none;
-        width: 170px;
         border-bottom: 0.5px solid rgb(156, 155, 155);
         padding-bottom: 0.25rem;
         color: #878787;
@@ -349,6 +352,10 @@
         background: white;
         padding: 1rem;
         box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    }
+
+    .input-small{
+        grid-template-columns: 1fr;
     }
     
     .input-title{
@@ -364,7 +371,7 @@
     
     .button-hasil{
         width:85%;
-        margin: auto;
+        margin-bottom: 1rem;
     }
     
     .premi-hasil{
@@ -377,4 +384,14 @@
        font-weight: bold;
        margin-left: 0.5rem;
     } 
+
+    .checkbox{
+        grid-template-columns: 1fr;
+        place-items: normal start;
+        gap: 0rem;
+    }
+
+    .checkbox-title{
+        margin-bottom: 1rem;
+    }
 }

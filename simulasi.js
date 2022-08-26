@@ -1,11 +1,11 @@
 function remove_dot(x)
 {
-    return x.split('.').join("");
+    return x.split(/[.,]/).join("");
 }
 
 function add_comma(x)
 {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 }
 
 function nilai_input() {
@@ -26,27 +26,27 @@ function nilai_input() {
     {       
         if(tipe == "Kategori 1" || tipe == "Kategori 4")
         {
-            biaya_tjh = nilai * 0.01;
+            biaya_tjh = 10000000 * 0.01;
         }
 
         else if (tipe == "Kategori 2" || tipe == "Kategori 3")
         {
-            biaya_tjh = nilai * 0.015;
+            biaya_tjh = 10000000 * 0.015;
         }
     }
 
-    // BIAYA TJH PENUMPANG
+    // BIAYA KECELAKAAN DIRI PENUMPANG
     var biaya_tjhp= 0; 
     if(document.getElementById('penumpang').checked)
     {       
-         biaya_tjhp = nilai * 0.005;
+         biaya_tjhp = (10000000 * 0.001) * 3;
     }
 
     // BIAYA KECELAKAAN DIRI
     var biaya_kecelakaan= 0; 
     if(document.getElementById('kecelakaan').checked)
     {       
-        biaya_kecelakaan = nilai * 0.005;
+        biaya_kecelakaan = 10000000 * 0.005;
     }
 
     // BIAYA KERUSUHAN
@@ -515,42 +515,43 @@ function nilai_input() {
         }
     }
 
+    // HASIL AWAL
+    var nilai_bawah_raw = nilai*batas_bawah;
+
+    // PEMBULATAN
+    var nilai_bawah = Math.floor(nilai_bawah_raw);
+
     // PREMI TAHUN
     const date = new Date();
     let tahun_sekarang = date.getFullYear();
     var tahun_kendaraan = tahun_sekarang - tahun;
     var biaya_reload = 0;
 
+    // MAX 10 Tahun
     if(tahun_kendaraan==5)
     {
-        biaya_reload = nilai * 0.05;
+        biaya_reload = nilai_bawah * 0.05;
     }
     else if(tahun_kendaraan==6)
     {
-        biaya_reload = nilai * 0.1;
+        biaya_reload = nilai_bawah * 0.1;
     }
     else if(tahun_kendaraan==7)
     {
-        biaya_reload = nilai * 0.15;
+        biaya_reload = nilai_bawah * 0.15;
     }
     else if(tahun_kendaraan==8)
     {
-        biaya_reload = nilai * 0.2;
+        biaya_reload = nilai_bawah * 0.2;
     }
     else if(tahun_kendaraan==9)
     {
-        biaya_reload = nilai * 0.25;
+        biaya_reload = nilai_bawah * 0.25;
     }
     else if(tahun_kendaraan==10)
     {
-        biaya_reload = nilai * 0.3;
+        biaya_reload = nilai_bawah * 0.3;
     }
-
-    // HASIL AWAL
-    var nilai_bawah_raw = nilai*batas_bawah;
-
-    // PEMBULATAN
-    var nilai_bawah = Math.floor(nilai_bawah_raw);
 
     // OUTPUT
     var output =  nilai_bawah + biaya_tjh + biaya_reload + biaya_kerusuhan + biaya_terorisme + biaya_tjhp + biaya_kecelakaan + biaya_banjir + biaya_gempa;
@@ -558,13 +559,11 @@ function nilai_input() {
     // TAMPIL HASIL
     if(isNaN(output) || output==0)
     {
-        document.getElementById("hasil").innerHTML= "Input Data Dengan Lengkap";
+        document.getElementById("hasil").innerHTML= "Masukkan Input Dengan Lengkap";
     }
 
     else{
         document.getElementById("hasil").innerHTML= "Rp. "+ add_comma(output);
     }
-
-    
 
 }
